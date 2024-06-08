@@ -1,24 +1,28 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Product Scraper
 
-Things you may want to cover:
+This Project consist the API for Scraping Informations.
 
-* Ruby version
 
-* System dependencies
+## Dependencies
 
-* Configuration
+Ruby 3.0.0 \
+Rails 7.1.3 \
+PostgreSQL 16.1
+## Installation
 
-* Database creation
 
-* Database initialization
+Install gem dependencies
+```bash
+  bundle install
+```
 
-* How to run the test suite
+Setup DB
+```bash
+  rails db:create db:migrate
+``` 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+running developemnt server
+```bash
+  rails s
+``` 
