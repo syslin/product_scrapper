@@ -48,3 +48,7 @@ end
 gem 'nokogiri' # For web scraping
 gem 'sidekiq' # For background jobs
 gem 'whenever' # For scheduling cron jobs
+
+gem 'rack-cors'
+
+gem 'pry'
