@@ -15,4 +15,10 @@ class ProductsController < ApplicationController
     ScraperService.new(product.url).scrape
     render json: { message: 'Product updated successfully' }
   end
+
+  def search
+    @products = Product.where("LOWER(title) LIKE ?", "%#{params[:query].downcase}%")
+    render json: @products
+  end
+
 end
