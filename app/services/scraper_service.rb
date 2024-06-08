@@ -19,6 +19,7 @@ class ScraperService
       price = parsed_data['pdt_price'].gsub(/\D/, '').to_i
       contact_info =  parsed_data['seller_name']
       category_name = parsed_data['pdt_category'][0]
+      img_url = parsed_data['pdt_photo']
 
       category = Category.find_or_create_by(name: category_name)
 
@@ -26,7 +27,9 @@ class ScraperService
         title: title,
         description: description,
         price: price,
-        category: category
+        category: category,
+        url: @url,
+        image_url: img_url
       )
     rescue OpenURI::HTTPError => e
       if retry_count < MAX_RETRIES
