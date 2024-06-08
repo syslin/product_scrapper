@@ -45,3 +45,6 @@ group :development do
   # gem "spring"
 end
 
+gem 'nokogiri' # For web scraping
+gem 'sidekiq' # For background jobs
+gem 'whenever' # For scheduling cron jobs
